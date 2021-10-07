@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="bunit" Version="1.2.49" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RPS.Core.Standard\RPS.Core.Standard.csproj" />
+    <ProjectReference Include="..\RPS.Data.Standard\RPS.Data.Standard.csproj" />
+    <ProjectReference Include="..\RPS.Web.Server\RPS.Web.Server.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Telerik.JustMock">
+      <HintPath>$(registry:HKEY_LOCAL_MACHINE\Software\Telerik\JustMock@BinaryPath)netcoreapp2.0\Telerik.JustMock.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
